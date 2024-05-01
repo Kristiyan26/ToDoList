@@ -61,21 +61,25 @@ form button{
     font-size:1em; 
     cursor: pointer;
 }
- #taskList li{
+#tasks li{
+    
     list-style: none;
     padding: 30px;
     cursor: pointer;
     position:relative;
+
  
     
 }
-#taskList{
+
+
+#tasks{
     align-self:start;
     width: 85%
    
     
 }
-#taskList li::before{
+#tasks li::before{
     content: '';
     background-image: url(./images/unchecked.png);
     height: 20px;
@@ -88,27 +92,32 @@ form button{
     color:#555;
     text-decoration: line-through;
 }
-#taskList li.checked::before{
+
+#tasks li.checked::before{
     background-image: url(./images/checked.png);
 
 } 
-#taskList li span{
-    position:absolute;
-    right: 0;
-    text-align: center;  
-    width: 25px;
-    height: 25px;
-    font-size: 20px;
-
-
-
+.task{
+    display: flex; 
+    text-align: start;
+    flex-direction: row;
+    align-items: center;
+    min-width: 3rem;
 }
-ul li span:hover{
- 
-    background-color:rgba(0, 0, 0, 0.293);
-    color:white;
+.task a{
+    color: black;
     font-weight: bold;
-
-    border-radius: 80px;
-
+    text-decoration: none;
+    background-color: rgba(205, 205, 205, 0.418);
+    text-align: center;
+    border-radius: 80px;      
+    padding-inline: 5px;
+    padding-bottom: 3px;
+    margin-right: 0px;
+    margin-left: auto;
+  
+}
+.task a:hover{
+    color: gray;
+    background-color: rgb(112, 112, 112)16b;
 }

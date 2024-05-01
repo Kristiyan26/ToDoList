@@ -1,32 +1,32 @@
 
 const taskInput=document.getElementById("taskInput");
-const taskList=document.getElementById("taskList");
+const taskList=document.getElementById("tasks");
 const tasks = document.querySelectorAll("li");
 
-  function addTask(){
-     if(taskInput.value==""){
-         window.alert("Enter a task First!");
+//   function addTask(){
+//      if(taskInput.value==""){
+//          window.alert("Enter a task First!");
  
-     }
-     else{
-        const newTask= document.createElement("li");
-        newTask.textContent=taskInput.value;
+//      }
+//      else{
+//         const newTask= document.createElement("li");
+//         newTask.textContent=taskInput.value;
  
-        const span  = document.createElement("span");
-        span.innerHTML="\u00d7";
+//         const span  = document.createElement("span");
+//         span.innerHTML="\u00d7";
         
-        newTask.appendChild(span);
+//         newTask.appendChild(span);
  
  
-        taskList.appendChild(newTask);
+//         taskList.appendChild(newTask);
     
        
  
-     }
-     taskInput.value="";
-     saveData();
+//      }
+//      taskInput.value="";
+
  
- };
+//  };
  
  
  
@@ -34,25 +34,20 @@ const tasks = document.querySelectorAll("li");
    if(event.target.tagName=="LI"){
     
        event.target.classList.toggle("checked");
-       saveData();
-    
+  
      
    }
-   else if(event.target.tagName=="SPAN"){
-     event.target.parentElement.remove();
-     saveData();
-   }
+
  })
  
- function saveData(){
+//  function saveData(){
  
-   localStorage.setItem("data",taskList.innerHTML);
- }
+//    localStorage.setItem("data",taskList.innerHTML);
+//  }
  
- function displayData(){
-   taskList.innerHTML=localStorage.getItem("data");
- }
- displayData();
-
+//  function displayData(){
+//    taskList.innerHTML=localStorage.getItem("data");
+//  }
+ 
 
 

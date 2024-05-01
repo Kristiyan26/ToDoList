@@ -11,15 +11,23 @@
     <div class="container">
 
         <h1 >To Do List <img id="toDoListIcon" src="images/toDoList.png" alt=""></h1>
-        <form>
-            <input type="text" placeholder="Enter a task" id="taskInput">
-            <button id ="addTaskButton" onclick="addTask()">Add Task</button>
+        <form method="post" action="/api/tasks">
+            <input type="text" name="text" placeholder="Enter a task" id="taskInput">
+            <button id ="addTaskButton" type="submit">Add Task</button>
         </form>
-       <ul id="taskList">   
-  
-        
-      
-       </ul>
+        <ul id="tasks">
+            <%if(locals.tasks){%>
+                <%for (let index = 0; index < tasks.length; index++) {%>
+                    
+                    <div class="task">
+                        <li><%=tasks[index].text%></li>
+                        <a href="/api/tasks/delete/<%=tasks[index].id%>">&#10005;</a>
+                    </div>
+                
+
+                <%}%>
+                <%}%>
+        </ul>
 
 
     </div>
