@@ -1,0 +1,114 @@
+body{
+    background: linear-gradient(135deg,#231c71 10%, #f95d03 360%) no-repeat;
+    background-size: cover;
+    height:2000px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}   
+
+h1{
+    color:#231c71;
+    font-weight: bold;
+    
+}
+#toDoListIcon{
+    position: relative;
+    top: 3px;
+    left: 8px;
+    width: 30px;
+}
+
+.container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    background:linear-gradient(130deg,#ffffff, rgb(231, 231, 231) );
+    border-radius: 20px;
+    max-width: 700px;
+    min-width: 300px;
+    margin: auto;    
+    box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.373);
+    
+}
+
+form input{
+
+    border: none;
+    padding: 10px;
+    font-size: 1.2em;
+    outline: none;
+
+}
+form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 20px;
+    box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.373);
+}
+form button{
+    border: none;
+    height: 42px;
+    border-radius: 20px;
+    background-color: #f95d03;
+    color: wheat;
+    width: 20%;
+    font-weight: bold;
+    font-size:1em; 
+    cursor: pointer;
+}
+ #taskList li{
+    list-style: none;
+    padding: 30px;
+    cursor: pointer;
+    position:relative;
+ 
+    
+}
+#taskList{
+    align-self:start;
+    width: 85%
+   
+    
+}
+#taskList li::before{
+    content: '';
+    background-image: url(./images/unchecked.png);
+    height: 20px;
+    width: 20px;
+    position:absolute;
+    background-size: cover;
+    left:1px
+}
+.checked{
+    color:#555;
+    text-decoration: line-through;
+}
+#taskList li.checked::before{
+    background-image: url(./images/checked.png);
+
+} 
+#taskList li span{
+    position:absolute;
+    right: 0;
+    text-align: center;  
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+
+
+
+}
+ul li span:hover{
+ 
+    background-color:rgba(0, 0, 0, 0.293);
+    color:white;
+    font-weight: bold;
+
+    border-radius: 80px;
+
+}
