@@ -3,8 +3,6 @@ const taskInput=document.getElementById("taskInput");
 const taskList=document.getElementById("taskList");
 const tasks = document.querySelectorAll("li");
 
-taskInput.textContent="nmo";
-
   function addTask(){
      if(taskInput.value==""){
          window.alert("Enter a task First!");

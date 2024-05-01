@@ -1,14 +1,22 @@
 import express from "express";
+import axios from "axios";
 
 
 
 const port = 3000;
 const app = express();
+const API_URL="http://localhost:4000";
 
 app.use(express.static("public"));
 
-app.get("/",(req,res)=>{
-    res.render("index.ejs");
+app.get("/",async (req,res)=>{
+    try{
+        const result = await axios.get(`${API_URL}/tasks`);
+        res.render("index.ejs",{tasks:result.data});
+        
+    }catch(error){
+
+    }
 });
 
 
