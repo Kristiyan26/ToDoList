@@ -22,7 +22,9 @@
                     <div class="task">
                         <li><%=tasks[index].text%></li>
                         <a href="/api/tasks/delete/<%=tasks[index].id%>">&#10005;</a>
+                        
                     </div>
+                    <p><%=tasks[index].date%></p>
                 
 
                 <%}%>

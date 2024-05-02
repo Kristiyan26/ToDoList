@@ -63,6 +63,8 @@ form button{
 }
 #tasks li{
     
+    font-size: large;
+    font-weight: bold;
     list-style: none;
     padding: 30px;
     cursor: pointer;
@@ -120,4 +122,12 @@ form button{
 .task a:hover{
     color: gray;
     background-color: rgb(112, 112, 112)16b;
+}
+.task{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+ul p{
+    padding-left: 3%;
+    margin-top: -10px;
 }

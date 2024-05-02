@@ -8,14 +8,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
+
 let tasks=[
     {
         id:1,
-        text:"I have to become a milionaire"
+        text:"I have to become a milionaire",
+        date : new Date().toDateString() +" - "+ new Date().getHours() +":"+ new Date().getMinutes()
     },
     {
         id:2,
-        text:"I want to improve my discipline"
+        text:"I want to improve my discipline",
+        date: new Date().toDateString() +" - "+ new Date().getHours() +":"+ new Date().getMinutes()
 
     }
 ];
@@ -31,7 +34,8 @@ app.post("/tasks",(req,res)=>{
     
     const newTask={
         id: lastId+ 1,
-        text : req.body.text
+        text : req.body.text,
+        date: new Date().toDateString() +" - "+ new Date().getHours() +":"+ new Date().getMinutes()
     }
     tasks.push(newTask);
     res.status(201).json(newTask);
